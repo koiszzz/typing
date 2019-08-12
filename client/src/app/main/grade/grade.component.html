@@ -1,0 +1,10 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>成绩查询</mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div style="padding: 10px">
+  <button mat-raised-button color="warn" routerLink="/main/part">返回考试列表</button>
+  <button mat-raised-button color="warn" routerLink="/main">返回主页</button>
+</div>
+<app-data-table [tableData]="tableInfo"></app-data-table>

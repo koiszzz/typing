@@ -1,0 +1,13 @@
+<div class="exam-info">
+  <app-count-down *ngIf="cdOptions" [grade]="grade" [options]="cdOptions" (count)="count($event)"></app-count-down>
+</div>
+<div class="screen" #typing>
+  <div class="typing-area" [class.numType]="candidate.articleType === '数字'">
+    <app-type-row *ngFor="let content of contents; let i = index"
+                  [content]="content.data"
+                  [index]="i"
+                  [init]="content.init"
+                  (analysis)="dataAnalysis($event)"
+                  (overload)="jumpRow($event)"></app-type-row>
+  </div>
+</div>

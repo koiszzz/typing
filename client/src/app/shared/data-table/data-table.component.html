@@ -1,0 +1,32 @@
+<div class="table">
+  <div class="tableActions" *ngIf="tableData.actions && tableData.actions.length > 0">
+    <button mat-raised-button color="accent" type="button" *ngFor="let action of tableData.actions" (click)="actionSwitch(action)">{{action.actionName}}</button>
+  </div>
+  <div class="body">
+    <div class="row rowHeader">
+      <div class="cell" *ngFor="let column of tableData.columns">{{column.columnName}}</div>
+    </div>
+    <div class="row" *ngFor="let table of data; let i = index">
+      <div class="cell" *ngFor="let column of tableData.columns" [ngSwitch]="column.columnType">
+        <!--用于显示 -->
+        <div *ngSwitchCase="0" [ngSwitch]="column.dataType">
+          <div *ngSwitchCase="'date'">{{table[column.column] | date : 'yyyyMMdd HH:mm:ss'}}</div>
+          <div *ngSwitchDefault>{{table[column.column]}}</div>
+        </div>
+         <!--用于显示操作按钮-->
+        <div *ngSwitchCase="1">
+          <button *ngFor="let child of column.children;" (click)="actionSwitch(child, i)">{{child.actionName}}</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!data || data.length <= 0" class="row">
+      <div class="cell">没有数据</div>
+    </div>
+  </div>
+  <div class="tableInfo">
+    <button>后一页</button>
+    <div>页面：{{pageInfo.page + 1}} / {{pageInfo.pageNum}}</div>
+    <button>前一页</button>
+    <button (click)="refresh()">刷新页面</button>
+  </div>
+</div>

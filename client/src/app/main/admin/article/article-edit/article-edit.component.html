@@ -1,0 +1,25 @@
+<div style="width: 800px" [formGroup]="group">
+  <h4>文章编辑</h4>
+  <div style="margin-top: 10px">
+    <mat-form-field style="width: 33%">
+      <input matInput type="text" placeholder="文章标题" formControlName="name"/>
+    </mat-form-field>
+    <mat-form-field style="width: 33%">
+      <mat-select placeholder="类型" formControlName="articleType">
+        <mat-option value="汉字">汉字</mat-option>
+        <mat-option value="数字">数字</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field style="width: 33%">
+      <mat-select placeholder="计算规则" formControlName="cmId" (valueChange)="OptionChange($event)">
+        <mat-option *ngFor="let method of calMethods;" [value]="method.id">{{method.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field style="width: 100%">
+      <textarea matInput placeholder="文章内容" formControlName="content"></textarea>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" (click)="submit()">保存</button>
+</div>

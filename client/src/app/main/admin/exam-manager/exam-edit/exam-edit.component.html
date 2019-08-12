@@ -1,0 +1,40 @@
+<h4>创建表单</h4>
+<div class="form" style="width: 800px" [formGroup]="group">
+  <div class="formRow">
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="text" formControlName="name" placeholder="考试名称" autocomplete="off"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="formRow">
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="number" formControlName="timeLength" placeholder="考试时长" autocomplete="off"/>
+        <span matSuffix>秒</span>
+      </mat-form-field>
+    </div>
+    <div class="formCell">
+      <mat-form-field>
+        <mat-select formControlName="articleId" (valueChange)="articleChange($event)" placeholder="文章名称">
+          <mat-option *ngFor="let article of articles;" [value]="article.id">{{article.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="formRow">
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="text" formControlName="limitIpStart" placeholder="限制IP－起始" autocomplete="off"/>
+      </mat-form-field>
+    </div>
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="text" formControlName="limitIpEnd" placeholder="限制IP－终止" autocomplete="off"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="formRow">
+    <button mat-raised-button (click)="save()">保存</button>
+  </div>
+</div>

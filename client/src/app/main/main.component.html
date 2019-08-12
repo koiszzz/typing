@@ -1,0 +1,13 @@
+<div class="mainPage">
+  <app-user-info></app-user-info>
+  <mat-card class="mat-elevation-z3">
+    <mat-card-header>
+      <mat-icon mat-card-avatar>menu</mat-icon>
+      <mat-card-title>菜单</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="routers">
+      <app-router-button *ngFor="let router of routers" [routerInfo]="router"></app-router-button>
+    </mat-card-content>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,20 @@
+<div class="typing_info">
+  <div class="typing_info_li">
+    <ul>
+      <li>
+        <div class="timerIcon"></div>
+      </li>
+      <li class="daojishi">
+        倒计时
+      </li>
+      <li class="daojishi_time">{{showTime()}}</li>
+      <li class="sheding">时　间：{{options.initTime / 60}}分钟</li>
+      <li class="sudu">速　度：{{showSpeed()}} 字/分</li>
+      <li class="zhengquelv">正确率：{{rightRate()}} %</li>
+      <li class="cuowu">正　确：{{grade.success}} 字</li>
+      <li class="cuowu">错　误：{{grade.error}} 字</li>
+      <li class="zongzishu">总字数：{{grade.success + grade.error}} 字</li>
+      <li class="tuige">跳　字：{{grade.jump}} 字</li>
+    </ul>
+  </div>
+</div>

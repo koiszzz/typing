@@ -1,0 +1,11 @@
+.mainPage{
+  padding:10px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.routers {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

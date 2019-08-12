@@ -1,0 +1,46 @@
+.typing_info_li ul {
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.typing_info_li li {
+  line-height: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.typing_info {
+  width: 200px;
+  background: #FFF;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.typing_info_li {
+  font-size: 14px;
+  color: #666;
+  height: auto;
+}
+.typing_info_li li {
+  text-wrap: none;
+}
+.sheding {
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  line-height: 15px;
+}
+.daojishi {
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 0px;
+}
+.typing_info li.daojishi_time {
+  font-size: 32px;
+  font-family: "微软雅黑","黑体";
+  font-weight: bold;
+  color: #f5a71b;
+  text-align: center;
+  margin-bottom: 3px;
+}

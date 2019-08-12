@@ -1,0 +1,11 @@
+.label-div::after {
+  content: ':';
+}
+mat-card-content div {
+  display: flex;
+  font-size: 15px;
+  height: 25px;
+}
+.label-div {
+  width: 100px;
+}

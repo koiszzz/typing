@@ -1,0 +1,49 @@
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+.tableActions {
+  padding: 5px;
+}
+.tableActions::before {
+  content: '表格操作: ';
+}
+.tableActions button {
+  margin-left: 5px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px 0 10px;
+}
+.body .row:first-child {
+  border-top: #666666 solid 1px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: #666666 solid 1px;
+}
+.rowHeader {
+  font-weight: bold;
+  font-size: medium;
+}
+.row .cell:first-child {
+  border-left: #666666 solid 1px;
+}
+.cell {
+  flex: 1 1 0;
+  text-align: center;
+  border-right: #666666 solid 1px;
+}
+.cell button {
+  border: none;
+  background: none;
+  color: cornflowerblue;
+}
+.tableInfo {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+}

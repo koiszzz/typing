@@ -1,0 +1,60 @@
+<h4>创建表单</h4>
+<div class="form" [formGroup]="group">
+  <div class="formRow">
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="text" formControlName="tableName" placeholder="表名"/>
+      </mat-form-field>
+    </div>
+    <div class="formCell">
+      <mat-form-field>
+        <input matInput type="text" formControlName="tableDesc" placeholder="表名描述"/>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="formRow">
+    <button mat-raised-button color="accent" (click)="addCell()">添加列</button>
+  </div>
+  <div class="tableProperties" formArrayName="cells">
+    <div class="formRow" *ngFor="let cell of group.get('cells')['controls'];let i = index" [formGroupName]="i">
+      <div class="formCell">
+        <mat-form-field>
+          <input matInput type="text" formControlName="cell" placeholder="列名"/>
+        </mat-form-field>
+      </div>
+      <div class="formCell">
+        <mat-form-field>
+          <input matInput type="text" formControlName="cellDesc" placeholder="列名描述"/>
+        </mat-form-field>
+      </div>
+      <div class="formCell">
+        <mat-form-field>
+          <mat-select formControlName="cellType">
+            <mat-option value="String">String</mat-option>
+            <mat-option value="Buffer">Buffer</mat-option>
+            <mat-option value="Boolean">Boolean</mat-option>
+            <mat-option value="Date">Date</mat-option>
+            <mat-option value="Number">Number</mat-option>
+            <mat-option value="Schema.Types.Mixed">Schema.Types.Mixed</mat-option>
+            <mat-option value="Schema.Types.ObjectId">Schema.Types.ObjectId</mat-option>
+            <mat-option value="Schema.Types.Decimal128">Schema.Types.Decimal128</mat-option>
+            <mat-option value="Map">Map</mat-option>
+            <mat-option value="array">array</mat-option>
+            <mat-option value="nested">nested</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="formCell">
+        <mat-form-field>
+          <input matInput type="text" formControlName="cellChild" placeholder="类型内容,仅type为array，nested时有效"/>
+        </mat-form-field>
+      </div>
+      <button mat-mini-fab color="warn" (click)="removeCell(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="formRow">
+    <button (click)="save()" mat-raised-button color="primary">保存</button>
+  </div>
+</div>

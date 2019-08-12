@@ -1,0 +1,48 @@
+.content {
+  background: #FFF;
+  overflow: hidden;
+  padding: 10px 20px 0px 20px;
+  border-radius: 5px;
+}
+.typing {
+  font-size: 16px;
+  background: #f9f6f2;
+  padding: 5px 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+
+.typing .error {
+  color: red;
+}
+
+.typing .success {
+  color: green;
+}
+
+.typing .yellow {
+  color: #960;
+}
+
+.typing .text {
+  background: #faeede;
+  border: 1px solid #faeede;
+  color: #333;
+  padding: 5px 2px;
+}
+
+.typing .input {
+  width: 100%;
+  padding: 5px 2px;
+}
+.input input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  background: #FFF;
+  border: 1px solid #c9a87c;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+}

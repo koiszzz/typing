@@ -1,0 +1,16 @@
+.userInfo {
+  width: 150px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.infoLine {
+  width: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.infoLine .label {
+  width: 80px;
+  font-weight: bold;
+}

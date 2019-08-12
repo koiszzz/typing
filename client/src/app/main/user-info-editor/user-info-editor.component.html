@@ -1,0 +1,40 @@
+<mat-card class="mat-elevation-z5" style="margin: 10px">
+  <mat-card-header>
+    <mat-card-title>用户信息修改</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <div class="label-div">员工编号</div>
+      <div class="real-value">{{user.eNo}}</div>
+    </div>
+    <div>
+      <div class="label-div">员工姓名</div>
+      <div class="real-value">{{user.eName}}</div>
+    </div>
+    <div>
+      <div class="label-div">所属网点编号</div>
+      <div class="real-value">{{user.deptCode}}</div>
+    </div>
+    <div>
+      <div class="label-div">所属网点</div>
+      <div class="real-value">{{user.deptName}}</div>
+    </div>
+    <div>
+      <div class="label-div">员工电话</div>
+      <div class="real-value">{{user.eMobile}}</div>
+    </div>
+    <div>
+      <div class="label-div">身份证</div>
+      <div>
+        <input [formControl]="certNo" type="text" style="border-left: none; border-top: none; border-right: none; border-bottom: 1px solid" maxlength="18">
+      </div>
+    </div>
+    <div>
+      <div class="label-div">年龄</div>
+      <div>{{age}}</div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="save()">保存</button>
+  </mat-card-actions>
+</mat-card>

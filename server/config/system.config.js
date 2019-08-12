@@ -1,0 +1,1 @@
+exports.YX_PLATEFORM = 'http://11.24.122.22:8082';

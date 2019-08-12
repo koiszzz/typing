@@ -1,0 +1,18 @@
+<div style="width: 800px" [formGroup]="group">
+  <h4>计算规则编辑</h4>
+  <div style="margin-top: 10px">
+    <mat-form-field style="width: 100%">
+      <input matInput type="text" placeholder="计算规则名称" formControlName="name"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field style="width: 100%">
+      <textarea matInput placeholder="计算规则" formControlName="method" rows="5"></textarea>
+    </mat-form-field>
+  </div>
+  <div>输入：age(年龄)、success(成功字数)、error(错误字数)</div>
+  <div>输出：grade(成绩)、correctRate(正确率)</div>
+  <div>测试时初始值:grade = 0,correctRate = 0, age = 30, success = 100, error = 0</div>
+  <button mat-raised-button color="primary" (click)="submit()">保存</button>
+  <button mat-raised-button color="warn" (click)="test()">测试计算规则</button>
+</div>

@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="typing typing_on">
+    <div class="text"><span *ngFor="let showCell of showContent" [class]="showCell.style">{{showCell.content}}</span></div>
+    <div class="input">
+      <input #inputEle autocomplete="off" type="text" class="typing"
+             [formControl]="curInput"
+             (keyup.space)="replaceSpace($event)"
+             (keydown.backspace)="back($event)"
+             (keydown.delete)="back($event)">
+    </div>
+  </div>
+</div>

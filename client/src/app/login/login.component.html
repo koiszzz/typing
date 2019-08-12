@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <div>
+      <h1 class="text-center login-title">打字考试系统</h1>
+      <div class="account-wall">
+        <img class="profile-img" src="../../assets/noneUser.png">
+        <form class="form-signin" (submit)="signIn(account.value,password.value,$event)" novalidate autocomplete="off">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="账号" type="text" name="account" #account required autofocus>
+            <mat-hint class="errMsg">
+              请使用营销平台用户
+            </mat-hint>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" required>
+            <input matInput placeholder="密码" type="password" name="password" #password required autocomplete="new-password">
+            <mat-hint class="errMsg">{{password.validationMessage}}</mat-hint>
+          </mat-form-field>
+          <button mat-raised-button type="submit">登 陆</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
